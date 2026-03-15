@@ -16,34 +16,18 @@ This is the decision engine for every session. Load it immediately after `projec
 
 | Task Type | Intent Signals | Agent | Docs to Load (in order) |
 |---|---|---|---|
-| **Project status review** | "where are we", "what phase", "project status", "what's happening", "catch me up" | Orchestrator | project-index.md → phase-plan.md → open-questions.md |
-| **Decision logging** | "log this decision", "record that we decided", "note this", "update the decision log" | Orchestrator | project-index.md → decision-log.md |
-| **Phase transition planning** | "plan the next phase", "transition to design", "move to deliver", "next phase" | Orchestrator | project-index.md → phase-plan.md → conflict-register.md |
-| **Open question triage** | "open questions", "blockers", "what's unresolved", "what's blocked", "outstanding items" | Orchestrator | project-index.md → open-questions.md → conflict-register.md |
-| **Conflict resolution** | "conflict between", "disagreement on", "which direction should we", "we can't agree on" | Orchestrator | project-index.md → conflict-register.md → decision-log.md |
-| **Stakeholder mapping** | "stakeholders", "who is involved", "map the team", "who are the decision makers", "who needs to sign off" | Discover | project-index.md → discover/skills.md → stakeholder-map.md |
-| **Current process documentation** | "current process", "as-is", "how it works today", "existing workflow", "document the current state" | Discover | project-index.md → discover/skills.md → process-map-current.md |
-| **User journey mapping** | "user journey", "current experience", "what does [user] go through", "journey map", "end-to-end experience" | Discover | project-index.md → discover/skills.md → user-journey-map.md → stakeholder-map.md |
-| **Assumption registration** | "assumption", "we're assuming", "needs validation", "register an assumption", "what are we assuming" | Discover | project-index.md → discover/skills.md → assumption-register.md |
-| **Research synthesis** | "synthesise research", "synthesize research", "key insights", "what did we learn", "summarise findings", "research themes" | Discover | project-index.md → discover/skills.md → research-synthesis.md |
-| **Persona development** | "persona", "user profile", "who is our user", "define [user role]", "describe [user type]", "create a persona" | Define | project-index.md → define/skills.md → personas.md → research-synthesis.md |
-| **Problem statement writing** | "problem statement", "frame the problem", "what problem are we solving", "HMW", "how might we" | Define | project-index.md → define/skills.md → problem-statements.md → personas.md → research-synthesis.md |
-| **Pain point analysis** | "pain points", "frustrations", "what's not working", "friction", "user complaints", "what hurts" | Define | project-index.md → define/skills.md → pain-point-matrix.md → affinity-map.md |
-| **Success metric definition** | "success metrics", "KPIs", "how do we measure", "definition of done", "what does success look like" | Define | project-index.md → define/skills.md → success-metrics.md → problem-statements.md |
-| **Experience principles** | "experience principles", "design principles", "what should the experience feel like", "guiding principles", "north star" | Define | project-index.md → define/skills.md → experience-principles.md → problem-statements.md |
-| **Wireframing** | "wireframe", "design the", "sketch out", "layout for", "design [feature name]", "what should [screen] look like" | Design | project-index.md → design/skills.md → component-library-reference.md → problem-statements.md → personas.md → wireframes.md |
-| **User flow design** | "user flow", "flow for", "steps to", "journey through", "task flow", "how does a user [action]" | Design | project-index.md → design/skills.md → component-library-reference.md → user-flows.md → information-architecture.md → problem-statements.md |
-| **Information architecture** | "information architecture", "IA", "navigation structure", "content structure", "how should this be organised", "site structure" | Design | project-index.md → design/skills.md → information-architecture.md → problem-statements.md → personas.md |
-| **Feasibility assessment** | "feasibility", "is this possible", "can we build", "technical constraints", "what are the constraints", "is this feasible" | Design | project-index.md → design/skills.md → feasibility-notes.md → wireframes.md |
-| **Design iteration** | "iterate on", "refine the design", "update the wireframe", "feedback on", "improve the design", "revise" | Design | project-index.md → design/skills.md → component-library-reference.md → iteration-log.md → wireframes.md → user-flows.md |
-| **Component selection** | "which component", "what component should I use for", "what should I use for", "component for" | Design | project-index.md → design/skills.md → component-library-reference.md |
-| **User story writing** | "user stories", "write stories for", "story for", "dev handoff", "requirements for" | Deliver | project-index.md → deliver/skills.md → user-stories.md → wireframes.md → personas.md |
-| **Acceptance criteria** | "acceptance criteria", "AC for", "how do we test", "definition of done for", "testable criteria" | Deliver | project-index.md → deliver/skills.md → acceptance-criteria.md → user-stories.md |
-| **State matrix creation** | "state matrix", "UI states", "all states of", "component states", "interaction states", "what are the states" | Deliver | project-index.md → deliver/skills.md → state-matrix.md → wireframes.md → feasibility-notes.md |
-| **UAT planning** | "UAT", "user acceptance", "test plan", "testing plan", "plan for testing", "test script" | Deliver | project-index.md → deliver/skills.md → uat-plan.md → user-stories.md → acceptance-criteria.md |
-| **UAT findings** | "UAT findings", "test results", "what did UAT find", "post-UAT", "testing feedback", "UAT outcome" | Deliver | project-index.md → deliver/skills.md → uat-findings.md → uat-plan.md |
-| **Handoff documentation** | "handoff doc", "developer spec", "build spec", "implementation doc", "dev-ready spec", "hand this off" | Deliver | project-index.md → deliver/skills.md → handoff-docs/ → wireframes.md → state-matrix.md → acceptance-criteria.md |
-| **Post-launch logging** | "post-launch", "live issues", "production findings", "after go-live", "what happened after launch", "live bugs" | Deliver | project-index.md → deliver/skills.md → post-launch-log.md → uat-findings.md |
+| **Project status & orientation** | "where are we", "what phase", "project status", "catch me up", "next phase", "plan transition", "open questions", "blockers" | Orchestrator | project-index.md → phase-plan.md → open-questions.md |
+| **Decision logging** | "log this decision", "record that we decided", "note this", "conflict between", "we can't agree on" | Orchestrator | project-index.md → decision-log.md → conflict-register.md |
+| **Stakeholder mapping** | "stakeholders", "who is involved", "map the team", "who needs to sign off" | Discover | project-index.md → discover/skills.md → stakeholder-map.md |
+| **Current process documentation** | "current process", "as-is", "how it works today", "existing workflow" | Discover | project-index.md → discover/skills.md → process-map-current.md |
+| **Research & assumptions** | "synthesise research", "key insights", "what did we learn", "assumption", "we're assuming", "user journey", "what does [user] go through" | Discover | project-index.md → discover/skills.md → research-synthesis.md → assumption-register.md → user-journey-map.md |
+| **Persona & problem definition** | "persona", "who is our user", "problem statement", "frame the problem", "HMW", "pain points", "success metrics" | Define | project-index.md → define/skills.md → personas.md → problem-statements.md → research-synthesis.md |
+| **Component selection** | "which component", "what component for", "what should I use for", "component for" | Design | project-index.md → design/skills.md → component-library-reference.md |
+| **Wireframing & flows** | "wireframe", "design the", "layout for", "user flow", "steps to", "how does a user [action]", "IA", "iterate on design", "refine" | Design | project-index.md → design/skills.md → component-library-reference.md → problem-statements.md → personas.md → wireframes.md → user-flows.md |
+| **Feasibility assessment** | "feasibility", "is this possible", "can we build", "technical constraints" | Design | project-index.md → design/skills.md → feasibility-notes.md → wireframes.md |
+| **User stories & acceptance criteria** | "user stories", "write stories for", "acceptance criteria", "AC for", "definition of done", "requirements for" | Deliver | project-index.md → deliver/skills.md → user-stories.md → acceptance-criteria.md → wireframes.md → personas.md |
+| **State matrix** | "state matrix", "UI states", "all states of", "component states", "interaction states" | Deliver | project-index.md → deliver/skills.md → state-matrix.md → wireframes.md → feasibility-notes.md |
+| **UAT & handoff** | "UAT", "user acceptance", "test plan", "handoff doc", "developer spec", "build spec", "post-launch", "live issues" | Deliver | project-index.md → deliver/skills.md → uat-plan.md → uat-findings.md → user-stories.md → acceptance-criteria.md → handoff-docs/ |
 
 ---
 

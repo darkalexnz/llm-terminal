@@ -32,71 +32,50 @@ See `about-user.md` for full profile.
 
 ## Task Execution Protocol
 
-**Never produce deliverables until a written plan has been reviewed and approved by the user.**
+**TL;DR — create `task-plans/plan-[task-name].md` first. Always. No output before the plan file exists and the user has reviewed it.**
 
-All plan documents are stored at the **workspace root** in `task-plans/plan-[task-name].md` — never inside a project subdirectory. Research and planning live in the same document.
-
-Run all three phases in a single continuous session where possible.
+Plan files live at the **workspace root** in `task-plans/` — never inside a project subdirectory. Research and planning go in the same file.
 
 ---
 
 ### Phase 1 — Research
 
-1. Explore the relevant codebase, documents, or context thoroughly — unhurried, in depth
-2. Write findings into the **Research** section of `task-plans/plan-[task-name].md` (create the file and folder if needed)
+1. Explore thoroughly — read files, don't skim
+2. Write findings into the **Research** section of `task-plans/plan-[task-name].md`
 3. **Stop. Surface to the user:**
 
    > Research complete — see `task-plans/plan-[task-name].md`.
-   > Before I write the plan, please confirm:
-   > - Anything missing, misread, or misunderstood? *(annotate the file or reply here — short or long)*
-   > - Any constraints or domain knowledge I should factor in?
+   > - Anything missing or misunderstood? *(annotate the file or reply here)*
+   > - Constraints I should know? *(short or detailed — both fine)*
    > - Ready to proceed to planning? *(yes / or notes first)*
 
-4. Do not begin planning until the user responds.
+4. Wait for response before continuing.
 
 ---
 
 ### Phase 2 — Plan
 
-1. Append a **Plan** section to the same `task-plans/plan-[task-name].md` — include rationale, file paths, steps, trade-offs, and a **granular task checklist** at the end
+1. Append a **Plan** section to the same file — rationale, file paths, steps, trade-offs, and a task checklist
 2. **Stop. Surface to the user:**
 
    > Plan added to `task-plans/plan-[task-name].md`.
-   > Please review and annotate directly in the file, or reply here:
-   > - Steps to remove, reorder, or replace? *(mark in the file or list here)*
-   > - Technical or domain constraints I've missed? *(e.g. "use X", "don't touch Y")*
-   > - Scope to cut before we start?
-   > - Approved to implement? *(yes / or list changes — I'll revise before starting)*
+   > - Steps to change or cut? *(annotate the file or note here)*
+   > - Constraints I've missed?
+   > - Approved? *(yes / or changes needed — I'll revise before starting)*
 
-3. Revise the plan based on feedback. Repeat this cycle until the user explicitly approves.
-4. Do not begin implementation without explicit approval.
+3. Revise based on feedback. Repeat until explicitly approved.
+4. Do not implement without approval.
 
 ---
 
 ### Phase 3 — Implement
 
-Triggered only by explicit user approval of the plan.
+Triggered by explicit user approval only.
 
-1. Execute the full approved plan — do not pause mid-implementation for confirmation
-2. Mark tasks complete in the plan document checklist as you go
-3. Run typechecks continuously where applicable
-4. If something unexpected blocks progress, **stop and surface** — do not patch around it:
-
-   > Blocked: [describe the issue].
-   > Options:
-   > - [Option A — brief description]
-   > - [Option B — brief description]
-   > - Revert to last clean state and re-scope
-   > Which do you prefer? *(one word or a full note — both fine)*
-
-5. If a direction proves wrong: revert and re-scope against the plan — do not patch incrementally
-
----
-
-### Control levers throughout
-- The plan document is the control surface — all decisions and overrides should be recorded there
-- Cherry-pick from the plan, trim scope, and override technical choices using domain knowledge
-- The user's annotations (short or long) take precedence over the LLM's assumptions at every phase
+1. Execute the full approved plan — no mid-task confirmations
+2. Mark tasks complete in the checklist as you go
+3. If blocked, **stop and surface options** — do not patch around the problem
+4. If direction proves wrong: revert and re-scope, do not patch incrementally
 
 ---
 *WORKSPACE.md v1.2*

@@ -33,12 +33,12 @@ Every document in this system must open with this header block:
 ## Project Snapshot
 *Maximum five lines. Updated by Orchestrator after every significant decision.*
 
-- **Product:** [Product Name]
-- **Org:** [Organisation]
-- **Stack:** [Stack]
-- **Stage:** [Current stage — e.g. Discovery / Define / Design / Deliver]
-- **Primary users:** [User Type A], [User Type B], [User Type C]
-- **Open decisions:** [Decision 1], [Decision 2]
+- **Product:** Offer Management Platform — internal web app replacing spreadsheet/email offer lifecycle management
+- **Org:** NZ Telco (internal product team — PO, CX designer, analyst, UX, 6–8 developers)
+- **Stack:** React, TypeScript, Azure (dev/test/staging/prod), shadcn/ui, Git/GitHub, Azure DevOps
+- **Stage:** Pre-launch MVP — DeviceOps UAT done; Creative and Catalogue flows in progress
+- **Primary users:** DeviceOps, Creative, Catalogue teams
+- **Open decisions:** Figma design system migration (Mantine → shadcn); AI mandate owner; first end-to-end agent task not yet run
 
 ---
 
@@ -61,48 +61,48 @@ Every document in this system must open with this header block:
 | `project-index.md` | Orchestrator | 1 | Active |
 | `routing-guide.md` | Orchestrator | 2 | Active |
 | `session-protocol.md` | Orchestrator | 2 | Active |
-| `phase-plan.md` | Orchestrator | 2 | Not started |
-| `decision-log.md` | Orchestrator | 2 | Not started |
-| `open-questions.md` | Orchestrator | 2 | Not started |
-| `conflict-register.md` | Orchestrator | 2 | Not started |
+| `phase-plan.md` | Orchestrator | 2 | On demand |
+| `decision-log.md` | Orchestrator | 2 | On demand |
+| `open-questions.md` | Orchestrator | 2 | On demand |
+| `conflict-register.md` | Orchestrator | 2 | On demand |
 | `skills.md` | Orchestrator | 2 | Active |
-| `assumption-register.md` | Discover | 2 | Not started |
-| `stakeholder-map.md` | Discover | 2 | Not started |
-| `process-map-current.md` | Discover | 2 | Not started |
-| `user-journey-map.md` | Discover | 2 | Not started |
-| `research-synthesis.md` | Discover | 2 | Not started |
+| `assumption-register.md` | Discover | 2 | On demand |
+| `stakeholder-map.md` | Discover | 2 | On demand |
+| `process-map-current.md` | Discover | 2 | On demand |
+| `user-journey-map.md` | Discover | 2 | On demand |
+| `research-synthesis.md` | Discover | 2 | On demand |
 | `skills.md` | Discover | 2 | Active |
-| `personas.md` | Define | 2 | Not started |
-| `affinity-map.md` | Define | 2 | Not started |
-| `pain-point-matrix.md` | Define | 2 | Not started |
-| `problem-statements.md` | Define | 2 | Not started |
-| `success-metrics.md` | Define | 2 | Not started |
-| `experience-principles.md` | Define | 2 | Not started |
+| `personas.md` | Define | 2 | On demand |
+| `affinity-map.md` | Define | 2 | On demand |
+| `pain-point-matrix.md` | Define | 2 | On demand |
+| `problem-statements.md` | Define | 2 | On demand |
+| `success-metrics.md` | Define | 2 | On demand |
+| `experience-principles.md` | Define | 2 | On demand |
 | `skills.md` | Define | 2 | Active |
-| `information-architecture.md` | Design | 2 | Not started |
-| `user-flows.md` | Design | 2 | Not started |
-| `wireframes.md` | Design | 2 | Not started |
+| `information-architecture.md` | Design | 2 | On demand |
+| `user-flows.md` | Design | 2 | On demand |
+| `wireframes.md` | Design | 2 | On demand |
 | `component-library-reference.md` | Design | 2 | Active |
-| `feasibility-notes.md` | Design | 2 | Not started |
-| `iteration-log.md` | Design | 2 | Not started |
-| `prototype-log.md` | Design | 2 | Not started |
+| `feasibility-notes.md` | Design | 2 | On demand |
+| `iteration-log.md` | Design | 2 | On demand |
+| `prototype-log.md` | Design | 2 | On demand |
 | `skills.md` | Design | 2 | Active |
-| `state-matrix.md` | Deliver | 2 | Not started |
-| `user-stories.md` | Deliver | 2 | Not started |
-| `acceptance-criteria.md` | Deliver | 2 | Not started |
-| `handoff-docs/` | Deliver | 2 | Not started |
-| `uat-plan.md` | Deliver | 2 | Not started |
-| `uat-findings.md` | Deliver | 2 | Not started |
-| `post-launch-log.md` | Deliver | 2 | Not started |
+| `state-matrix.md` | Deliver | 2 | On demand |
+| `user-stories.md` | Deliver | 2 | On demand |
+| `acceptance-criteria.md` | Deliver | 2 | On demand |
+| `handoff-docs/` | Deliver | 2 | On demand |
+| `uat-plan.md` | Deliver | 2 | On demand |
+| `uat-findings.md` | Deliver | 2 | On demand |
+| `post-launch-log.md` | Deliver | 2 | On demand |
 | `skills.md` | Deliver | 2 | Active |
 
 ---
 
 ## Document Location Guide
 
-- `/foundation/`: Core system documents (context.md, project-index-template.md) and shared references (component-library-reference.md when created).
+- `/foundation/`: Core project context (`context.md`) and design vocabulary reference.
 - `/tier-1-active/`: Always-loaded project index (this document).
-- `/tier-2-domain/{agent}/`: Domain documents owned by each agent (e.g., /tier-2-domain/design/wireframes.md).
+- `/tier-2-domain/{agent}/`: Domain documents owned by each agent — created on first use.
 - `/tier-3-work/`: Ephemeral task outputs and working files.
 - `/archive/`: Historical documents and completed phases.
 
