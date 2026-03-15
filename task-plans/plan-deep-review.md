@@ -1,13 +1,13 @@
 # plan-deep-review.md
 
-*Task: Deep review of llm-terminal workspace and agentic-product-design-system project*
+*Task: Deep review of llm-playground workspace and agentic-product-design-system project*
 *Phase: Research complete — awaiting user review before planning*
 
 ---
 
 ## Research
 
-### Workspace root (llm-terminal/)
+### Workspace root (llm-playground/)
 
 | File | Status | Notes |
 |---|---|---|
@@ -95,7 +95,7 @@
 ### Part A — Reimagine the `projects/` folder structure
 
 **Goal:** Create a clear structural separation between two modes of work:
-1. **Workspace-level work** — tasks that improve or operate on the LLM Terminal itself (e.g. today's review, updating WORKSPACE.md, creating skills)
+1. **Workspace-level work** — tasks that improve or operate on the LLM Playground itself (e.g. today's review, updating WORKSPACE.md, creating skills)
 2. **Project-level work** — tasks within a specific product project (e.g. wireframes, user stories, decisions for the Offer Management Platform)
 
 **Current problem:** The boundary is implicit. `task-plans/` handles workspace tasks. Projects live in `projects/`. But there's no clear convention distinguishing what belongs where, and the `projects/` folder contains two empty placeholder directories that add noise.
@@ -106,7 +106,7 @@
 - [ ] Add a `README.md` to `projects/` that defines the convention:
   - This folder contains **product projects only** — each with its own CLAUDE.md, memory architecture, and agent system
   - Workspace-level tasks (improving the terminal itself, updating shared docs) use `task-plans/` at root — not a project folder
-  - New projects get their own subdirectory following the `agentic-product-design-system` structure as the reference - *NO! This is the whole issue - each project should be it's own thing, not related to other projects but influenced by llm-terminal rules and procedures unless stated otherwise. THIS IS IMPORTANT*
+  - New projects get their own subdirectory following the `agentic-product-design-system` structure as the reference - *NO! This is the whole issue - each project should be it's own thing, not related to other projects but influenced by llm-playground rules and procedures unless stated otherwise. THIS IS IMPORTANT*
 - [ ] Add a `README.md` to `task-plans/` that defines its scope:
   - Workspace-level planning only — `plan-[task-name].md` per task
   - Not for project-specific task planning (that goes in the project's `tier-3-work/`)

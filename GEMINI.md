@@ -1,6 +1,6 @@
 # GEMINI.md
 
-Foundational mandates for all Gemini CLI sessions within the **LLM Terminal** workspace. Takes absolute precedence over general workflows and tool defaults.
+Foundational mandates for all Gemini CLI sessions within the **LLM Playground** workspace. Takes absolute precedence over general workflows and tool defaults.
 
 Read `WORKSPACE.md` for shared workspace context before proceeding. The Task Execution Protocol in `WORKSPACE.md` applies to all non-trivial tasks — produce research and plan files first, no deliverables without approval.
 

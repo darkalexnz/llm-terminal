@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-Foundational mandates for all Claude Code sessions within the **LLM Terminal** workspace. Takes absolute precedence over general defaults.
+Foundational mandates for all Claude Code sessions within the **LLM Playground** workspace. Takes absolute precedence over general defaults.
 
 ## START HERE — before any non-trivial task
 

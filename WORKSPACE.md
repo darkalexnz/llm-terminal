@@ -1,10 +1,10 @@
 # WORKSPACE.md
 
-Shared context for all LLM sessions in the **LLM Terminal** workspace. Loaded by `CLAUDE.md` and `GEMINI.md`.
+Shared context for all LLM sessions in the **LLM Playground** workspace. Loaded by `CLAUDE.md` and `GEMINI.md`.
 
 ## Workspace Mission
 
-The **LLM Terminal** is a high-performance environment for multi-LLM integration, project creation, and task orchestration across design, development, and planning.
+The **LLM Playground** is a high-performance environment for multi-LLM integration, project creation, and task orchestration across design, development, and planning.
 
 ## User Profile
 
