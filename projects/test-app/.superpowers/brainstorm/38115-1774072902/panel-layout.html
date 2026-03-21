@@ -1,0 +1,99 @@
+<h2>How should the dev panel appear?</h2>
+<p class="subtitle">Three approaches to how it sits alongside the chat modal</p>
+
+<div class="cards">
+
+  <div class="card" data-choice="floating" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f4f4f5;padding:16px;min-height:180px;position:relative;display:flex;align-items:center;justify-content:center;">
+      <!-- Chat modal -->
+      <div style="position:absolute;left:30px;top:20px;width:130px;height:140px;background:white;border:1.5px solid #e4e4e7;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.10);display:flex;flex-direction:column;overflow:hidden;">
+        <div style="background:#fafafa;border-bottom:1px solid #e4e4e7;padding:6px 8px;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:4px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;"></span> Chat
+        </div>
+        <div style="flex:1;padding:8px;display:flex;flex-direction:column;gap:5px;">
+          <div style="align-self:flex-end;background:#18181b;color:white;border-radius:8px 8px 2px 8px;padding:3px 7px;font-size:8px;">Hello!</div>
+          <div style="align-self:flex-start;background:#f4f4f5;border-radius:8px 8px 8px 2px;padding:3px 7px;font-size:8px;">Hi there!</div>
+        </div>
+      </div>
+      <!-- Dev panel -->
+      <div style="position:absolute;right:20px;top:20px;width:110px;height:140px;background:white;border:1.5px solid #e4e4e7;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.10);display:flex;flex-direction:column;overflow:hidden;">
+        <div style="background:#fafafa;border-bottom:1px solid #e4e4e7;padding:6px 8px;font-size:9px;font-weight:600;color:#333;">⚙ Style</div>
+        <div style="padding:8px;display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Colors</div>
+          <div style="display:flex;gap:3px;"><span style="width:12px;height:12px;border-radius:3px;background:#18181b;"></span><span style="width:12px;height:12px;border-radius:3px;background:#3b82f6;"></span><span style="width:12px;height:12px;border-radius:3px;background:#f4f4f5;"></span></div>
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">Radius</div>
+          <div style="height:4px;background:#e4e4e7;border-radius:2px;"><div style="width:60%;height:4px;background:#18181b;border-radius:2px;"></div></div>
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">Font size</div>
+          <div style="height:4px;background:#e4e4e7;border-radius:2px;"><div style="width:40%;height:4px;background:#18181b;border-radius:2px;"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Floating panel</h3>
+      <p>Separate draggable window — same pattern as the chat modal. Independent position.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="docked" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f4f4f5;padding:0;min-height:180px;position:relative;overflow:hidden;display:flex;">
+      <!-- Main area -->
+      <div style="flex:1;display:flex;align-items:center;justify-content:center;position:relative;">
+        <div style="width:130px;height:140px;background:white;border:1.5px solid #e4e4e7;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.10);display:flex;flex-direction:column;overflow:hidden;">
+          <div style="background:#fafafa;border-bottom:1px solid #e4e4e7;padding:6px 8px;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:4px;">
+            <span style="width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;"></span> Chat
+          </div>
+          <div style="flex:1;padding:8px;display:flex;flex-direction:column;gap:5px;">
+            <div style="align-self:flex-end;background:#18181b;color:white;border-radius:8px 8px 2px 8px;padding:3px 7px;font-size:8px;">Hello!</div>
+            <div style="align-self:flex-start;background:#f4f4f5;border-radius:8px 8px 8px 2px;padding:3px 7px;font-size:8px;">Hi there!</div>
+          </div>
+        </div>
+      </div>
+      <!-- Docked right panel -->
+      <div style="width:90px;background:white;border-left:1.5px solid #e4e4e7;display:flex;flex-direction:column;overflow:hidden;">
+        <div style="background:#fafafa;border-bottom:1px solid #e4e4e7;padding:6px 8px;font-size:9px;font-weight:600;color:#333;">⚙ Style</div>
+        <div style="padding:8px;display:flex;flex-direction:column;gap:6px;">
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Colors</div>
+          <div style="display:flex;gap:3px;"><span style="width:12px;height:12px;border-radius:3px;background:#18181b;"></span><span style="width:12px;height:12px;border-radius:3px;background:#3b82f6;"></span><span style="width:12px;height:12px;border-radius:3px;background:#f4f4f5;"></span></div>
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">Radius</div>
+          <div style="height:4px;background:#e4e4e7;border-radius:2px;"><div style="width:60%;height:4px;background:#18181b;border-radius:2px;"></div></div>
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;margin-top:2px;">Font</div>
+          <div style="height:4px;background:#e4e4e7;border-radius:2px;"><div style="width:40%;height:4px;background:#18181b;border-radius:2px;"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Docked sidebar</h3>
+      <p>Fixed right edge of the screen. Always visible, doesn't overlap content.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="badge" onclick="toggleSelect(this)">
+    <div class="card-image" style="background:#f4f4f5;padding:16px;min-height:180px;position:relative;display:flex;align-items:center;justify-content:center;">
+      <!-- Chat modal -->
+      <div style="width:130px;height:140px;background:white;border:1.5px solid #e4e4e7;border-radius:10px;box-shadow:0 4px 16px rgba(0,0,0,0.10);display:flex;flex-direction:column;overflow:hidden;">
+        <div style="background:#fafafa;border-bottom:1px solid #e4e4e7;padding:6px 8px;font-size:9px;font-weight:600;color:#333;display:flex;align-items:center;gap:4px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;"></span> Chat
+        </div>
+        <div style="flex:1;padding:8px;display:flex;flex-direction:column;gap:5px;">
+          <div style="align-self:flex-end;background:#18181b;color:white;border-radius:8px 8px 2px 8px;padding:3px 7px;font-size:8px;">Hello!</div>
+          <div style="align-self:flex-start;background:#f4f4f5;border-radius:8px 8px 8px 2px;padding:3px 7px;font-size:8px;">Hi there!</div>
+        </div>
+      </div>
+      <!-- Badge in corner -->
+      <div style="position:absolute;bottom:14px;right:14px;">
+        <div style="background:#18181b;color:white;border-radius:8px;padding:5px 10px;font-size:8px;font-weight:600;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,0.2);">⚙ Style ▲</div>
+        <div style="background:white;border:1.5px solid #e4e4e7;border-radius:8px;padding:8px;margin-top:4px;width:140px;box-shadow:0 4px 16px rgba(0,0,0,0.10);display:flex;flex-direction:column;gap:5px;">
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Colors</div>
+          <div style="display:flex;gap:3px;"><span style="width:12px;height:12px;border-radius:3px;background:#18181b;"></span><span style="width:12px;height:12px;border-radius:3px;background:#3b82f6;"></span><span style="width:12px;height:12px;border-radius:3px;background:#f4f4f5;"></span></div>
+          <div style="font-size:7px;color:#71717a;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;">Radius</div>
+          <div style="height:4px;background:#e4e4e7;border-radius:2px;"><div style="width:60%;height:4px;background:#18181b;border-radius:2px;"></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <h3>Corner badge + popover</h3>
+      <p>Collapsed button in the corner (like Next.js). Click to expand a popover panel.</p>
+    </div>
+  </div>
+
+</div>
